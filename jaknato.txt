@@ -1,0 +1,6 @@
+1) používej GitHub Desktop, příkazový řádek pro tebe ee
+2) musíš vědět, kde máš stažený na lokálním úložišti repositář z GitHubu, lucky for you je to tahle složka
+3) v GitHub Desktop se ti ten repositář ukáže, je potřeba si pravidelně předtím než začneš pracovat aktualizovat main branch, pomocí fetch origin
+4) ale jelikož jsme slušní, tak používáme každý svou vlastní větev (paldusova), kterou si při každé aktualizaci main větvě synchronizujeme s main větví (platí v případě, že je tvoje větev pozadu, tj. neudělala si žádné změny lokálně, které by jsi neuložila do main větve)
+- dělá se to proklikem možnosti Current branch (nazev branch) a choose a branch to merge into paldusova, pak vybereš main větev, tj. vem co je v main větvi a nasoukej to do mé větve (aah), pokud jsou 1:1 tak ti to napíše že paldusova je already up to date s main
+5) začneš pracovat lokálně na své větvi, něco upravíš a pak to musíš aktualizovat v "online verzi repositáře", to se děla pomocí toho modrého tlačítka commit něco něco to paldusová, pak ti tam vyskočí nabídka push origin (tj. lokální paldusová aktualizuje online Paldusovou)
