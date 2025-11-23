@@ -1,0 +1,180 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/arbeitsschritt": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the Processing Step.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_time_reference",
+          "in": "path",
+          "description": "Referents to events related to the Processing Step.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the Processing Step.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "ist_voraussetzung_für_schritt",
+          "in": "path",
+          "description": "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_substep",
+          "in": "path",
+          "description": "a core relation that holds between a whole and its part",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "näher_beschriebene_verbindung",
+          "in": "path",
+          "description": "Link to a description of a relationship between Processing Step and an agent with the specification of the role of agent in this relationship.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "investigates",
+          "in": "path",
+          "description": "(x investigates y) means that x is about y, in the context of scientific research and development",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_output",
+          "in": "path",
+          "description": "(x has output y) means x provides specific output y for the result or further processes",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_input",
+          "in": "path",
+          "description": "(x has input y) means x takes specific input as y for further processes",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "realisiert_methode",
+          "in": "path",
+          "description": "Points to a method that is used within a given processing step",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_employed_tool",
+          "in": "path",
+          "description": "Points to a tool that is used within a given processing step",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A specific ProcessingStep encompassing all physical, chemical, or biological manipulations applied to a sample before its imaging.",
+        "description": "A specific ProcessingStep encompassing all physical, chemical, or biological manipulations applied to a sample before its imaging.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "arbeitsschritt": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the Processing Step.",
+            "type": "string"
+          },
+          "has_time_reference": {
+            "description": "Referents to events related to the Processing Step.",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of the Processing Step.",
+            "type": "string"
+          },
+          "ist_voraussetzung_für_schritt": {
+            "description": "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.",
+            "type": "string"
+          },
+          "has_substep": {
+            "description": "a core relation that holds between a whole and its part",
+            "type": "string"
+          },
+          "näher_beschriebene_verbindung": {
+            "description": "Link to a description of a relationship between Processing Step and an agent with the specification of the role of agent in this relationship.",
+            "type": "string"
+          },
+          "investigates": {
+            "description": "(x investigates y) means that x is about y, in the context of scientific research and development",
+            "type": "string"
+          },
+          "has_output": {
+            "description": "(x has output y) means x provides specific output y for the result or further processes",
+            "type": "string"
+          },
+          "has_input": {
+            "description": "(x has input y) means x takes specific input as y for further processes",
+            "type": "string"
+          },
+          "realisiert_methode": {
+            "description": "Points to a method that is used within a given processing step",
+            "type": "string"
+          },
+          "has_employed_tool": {
+            "description": "Points to a tool that is used within a given processing step",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

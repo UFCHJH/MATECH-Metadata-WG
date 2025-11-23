@@ -1,0 +1,21 @@
+PREFIX ns0: <https://bioschemas.org/terms/>
+PREFIX ns1: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/datacite#>
+CONSTRUCT {
+  ?v0 a ns0:BioChemEntity .
+  ?v0 ns1:label ?v1 .
+  ?v0 ns2:hasDescription ?v2 .
+  ?v2 a ns2:Description .
+}
+WHERE {
+  ?v0 a ns0:BioChemEntity .
+  OPTIONAL {
+    ?v0 ns1:label ?v1 .
+  }
+  OPTIONAL {
+    ?v0 ns2:hasDescription ?v2 .
+    OPTIONAL {
+      ?v2 a ns2:Description .
+    }
+  }
+}

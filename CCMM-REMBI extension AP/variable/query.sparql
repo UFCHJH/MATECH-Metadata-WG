@@ -1,0 +1,7 @@
+PREFIX ns0: <http://www.molmod.info/semantics/pims-ii.ttl#>
+CONSTRUCT {
+  ?v0 a ns0:Variable .
+}
+WHERE {
+  ?v0 a ns0:Variable .
+}

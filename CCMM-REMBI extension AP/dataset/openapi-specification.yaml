@@ -1,0 +1,315 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/datová_sada": {
+      "parameters": [
+        {
+          "name": "publication_year",
+          "in": "path",
+          "description": "The year when the item was or will be made publicly available.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "version",
+          "in": "path",
+          "description": "The version indicator (name or identifier) of a resource.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "title",
+          "in": "path",
+          "description": "A name given to the dataset.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of a dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_alternate_title",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "is_described_by",
+          "in": "path",
+          "description": "Inverse relation between dataset and metadata record.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_identifier",
+          "in": "path",
+          "description": "has identifier",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_location",
+          "in": "path",
+          "description": "The geographical area covered by the dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_provenance",
+          "in": "path",
+          "description": "A statement about the lineage of a Dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "qualified_relation",
+          "in": "path",
+          "description": "Link to a description of a relationship between dataset and an agent with the specification of the role of agent in this relationship.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_time_reference",
+          "in": "path",
+          "description": "Reference to events related to the dataset.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_subject",
+          "in": "path",
+          "description": "Dataset described using a subject.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_validation_result",
+          "in": "path",
+          "description": "Reference to the report about the dataset validation.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_distribution",
+          "in": "path",
+          "description": "An available Distribution for the Dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_funding_reference",
+          "in": "path",
+          "description": "Has reference for funding of a dataset acquisition.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_terms_of_use",
+          "in": "path",
+          "description": "Terms under which the dataset may be accessed.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_related_resource",
+          "in": "path",
+          "description": "Reference to the resource in any way related to the described dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_resource_type",
+          "in": "path",
+          "description": "A resource type of the Dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_other_language",
+          "in": "path",
+          "description": "A primary language of the Dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_primary_language",
+          "in": "path",
+          "description": "A primary language of the Dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "wasgeneratedby",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of a dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A collection of data, published or curated by a single source, and available for access or download in one or more representations.",
+        "description": "A collection of data, published or curated by a single source, and available for access or download in one or more representations.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "datová_sada": {
+        "type": "object",
+        "properties": {
+          "publication_year": {
+            "description": "The year when the item was or will be made publicly available.",
+            "type": "string"
+          },
+          "version": {
+            "description": "The version indicator (name or identifier) of a resource.",
+            "type": "string"
+          },
+          "title": {
+            "description": "A name given to the dataset.",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of a dataset.",
+            "type": "string"
+          },
+          "has_alternate_title": {
+            "type": "string"
+          },
+          "is_described_by": {
+            "description": "Inverse relation between dataset and metadata record.",
+            "type": "string"
+          },
+          "has_identifier": {
+            "description": "has identifier",
+            "type": "string"
+          },
+          "has_location": {
+            "description": "The geographical area covered by the dataset.",
+            "type": "string"
+          },
+          "has_provenance": {
+            "description": "A statement about the lineage of a Dataset.",
+            "type": "string"
+          },
+          "qualified_relation": {
+            "description": "Link to a description of a relationship between dataset and an agent with the specification of the role of agent in this relationship.",
+            "type": "string"
+          },
+          "has_time_reference": {
+            "description": "Reference to events related to the dataset.",
+            "type": "string"
+          },
+          "has_subject": {
+            "description": "Dataset described using a subject.",
+            "type": "string"
+          },
+          "has_validation_result": {
+            "description": "Reference to the report about the dataset validation.",
+            "type": "string"
+          },
+          "has_distribution": {
+            "description": "An available Distribution for the Dataset.",
+            "type": "string"
+          },
+          "has_funding_reference": {
+            "description": "Has reference for funding of a dataset acquisition.",
+            "type": "string"
+          },
+          "has_terms_of_use": {
+            "description": "Terms under which the dataset may be accessed.",
+            "type": "string"
+          },
+          "has_related_resource": {
+            "description": "Reference to the resource in any way related to the described dataset.",
+            "type": "string"
+          },
+          "has_resource_type": {
+            "description": "A resource type of the Dataset.",
+            "type": "string"
+          },
+          "has_other_language": {
+            "description": "A primary language of the Dataset.",
+            "type": "string"
+          },
+          "has_primary_language": {
+            "description": "A primary language of the Dataset.",
+            "type": "string"
+          },
+          "wasgeneratedby": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

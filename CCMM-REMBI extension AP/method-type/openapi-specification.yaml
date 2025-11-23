@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/method_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the Method Type",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Specific type of method used for specific Processing Step, e.g.: \"Immunofluorescence confocal microscopy\", \"Cell growth\", \"Image deconvolution\"...",
+        "description": "Specific type of method used for specific Processing Step, e.g.: \"Immunofluorescence confocal microscopy\", \"Cell growth\", \"Image deconvolution\"...",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "method_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the Method Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

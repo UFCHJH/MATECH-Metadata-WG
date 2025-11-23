@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/biological_system_": {
+      "parameters": [
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the General Entity.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_part",
+          "in": "path",
+          "description": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the General Entity",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+        "description": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "biological_system_": {
+        "type": "object",
+        "properties": {
+          "has_description": {
+            "description": "Relation to the description of the General Entity.",
+            "type": "string"
+          },
+          "has_part": {
+            "description": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+            "type": "string"
+          },
+          "label": {
+            "description": "Label of the General Entity",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

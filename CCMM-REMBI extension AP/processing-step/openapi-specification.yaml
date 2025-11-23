@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/arbeitsschritt": {
+      "parameters": [],
+      "get": {
+        "summary": "A specific ProcessingStep describing process of quantitative or qualitative evaluation of image data.",
+        "description": "A specific ProcessingStep describing process of quantitative or qualitative evaluation of image data.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "arbeitsschritt": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}

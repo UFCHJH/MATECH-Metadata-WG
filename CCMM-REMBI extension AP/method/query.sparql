@@ -1,0 +1,48 @@
+PREFIX ns0: <http://w3id.org/nfdi4ing/metadata4ing#>
+PREFIX ns1: <https://w3id.org/rembi-voc/#>
+PREFIX ns2: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns3: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns4: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX ns5: <http://www.molmod.info/semantics/pims-ii.ttl#>
+CONSTRUCT {
+  ?v0 a ns0:Method .
+  ?v0 ns0:implementedByTool ?v1 .
+  ?v1 a ns0:Tool .
+  ?v0 ns1:hasmethodtype ?v2 .
+  ?v2 a ns2:Concept .
+  ?v0 ns3:label ?v3 .
+  ?v0 ns4:hasDescription ?v4 .
+  ?v4 a ns4:Description .
+  ?v0 ns0:hasParameter ?v5 .
+  ?v5 a ns5:Variable .
+}
+WHERE {
+  ?v0 a ns0:Method .
+  OPTIONAL {
+    ?v0 ns0:implementedByTool ?v1 .
+    OPTIONAL {
+      ?v1 a ns0:Tool .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns1:hasmethodtype ?v2 .
+    OPTIONAL {
+      ?v2 a ns2:Concept .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns3:label ?v3 .
+  }
+  OPTIONAL {
+    ?v0 ns4:hasDescription ?v4 .
+    OPTIONAL {
+      ?v4 a ns4:Description .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns0:hasParameter ?v5 .
+    OPTIONAL {
+      ?v5 a ns5:Variable .
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="werkzeug" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#Tool">
+    <xs:annotation>
+      <xs:documentation xml:lang="de">
+        Werkzeug
+      </xs:documentation>
+      <xs:documentation xml:lang="en">
+        Tool - Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_tool_type" type="xs:anyURI" sawsdl:modelReference="https://w3id.org/rembi-voc/#hasToolType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has Tool Type - Points to specific type of tool used
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - Label of the tool or method.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has description - Relation to the description of the Method and/or Tool.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_parameter" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#hasParameter">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Parameter
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has parameter - Points to a parameter of a given method or tool.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="implementiert" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#implementsMethod">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            implementiert
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            implements - Points to a method that is implemented by a given tool
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="werkzeug" type="werkzeug"/>
+</xs:schema>

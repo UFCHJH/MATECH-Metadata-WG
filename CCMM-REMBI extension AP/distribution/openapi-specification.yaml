@@ -1,0 +1,225 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/distribution_-_data_service": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description",
+          "in": "path",
+          "description": "A free-text account of the Distribution.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_documentation",
+          "in": "path",
+          "description": "A page or document about this Distribution.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "conforms_to_specification",
+          "in": "path",
+          "description": "An established standard to which the distribution conforms.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "služba_pro_přístup_k_datům",
+          "in": "path",
+          "description": "A site or end-point that gives access to the distribution of the dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Physical embodiment of the dataset distribution as a particular data service. ",
+        "description": "Physical embodiment of the dataset distribution as a particular data service. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/distribution_-_downloadable_file": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "byte_size",
+          "in": "path",
+          "description": "The size of a Distribution in bytes. ",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_checksum",
+          "in": "path",
+          "description": "A mechanism that can be used to verify that the contents of a distribution have not changed.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "conforms_to_schema",
+          "in": "path",
+          "description": "An established standard to which the distribution conforms.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "typ_média",
+          "in": "path",
+          "description": "The media type of the distribution as defined by IANA",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "přístupová_adresa",
+          "in": "path",
+          "description": "A URL that gives access to a Distribution of the Dataset.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "url_souboru_ke_stažení",
+          "in": "path",
+          "description": "A URL that is a direct link to a downloadable file in a given format.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_format",
+          "in": "path",
+          "description": "The file format of the distribution.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Physical embodiment of the dataset in a particular format. ",
+        "description": "Physical embodiment of the dataset in a particular format. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "distribution_-_data_service": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "description": "A free-text account of the Distribution.",
+            "type": "string"
+          },
+          "has_documentation": {
+            "description": "A page or document about this Distribution.",
+            "type": "string"
+          },
+          "conforms_to_specification": {
+            "description": "An established standard to which the distribution conforms.",
+            "type": "string"
+          },
+          "služba_pro_přístup_k_datům": {
+            "description": "A site or end-point that gives access to the distribution of the dataset.",
+            "type": "string"
+          }
+        }
+      },
+      "distribution_-_downloadable_file": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "byte_size": {
+            "description": "The size of a Distribution in bytes. ",
+            "type": "string"
+          },
+          "has_checksum": {
+            "description": "A mechanism that can be used to verify that the contents of a distribution have not changed.",
+            "type": "string"
+          },
+          "conforms_to_schema": {
+            "description": "An established standard to which the distribution conforms.",
+            "type": "string"
+          },
+          "typ_média": {
+            "description": "The media type of the distribution as defined by IANA",
+            "type": "string"
+          },
+          "přístupová_adresa": {
+            "description": "A URL that gives access to a Distribution of the Dataset.",
+            "type": "string"
+          },
+          "url_souboru_ke_stažení": {
+            "description": "A URL that is a direct link to a downloadable file in a given format.",
+            "type": "string"
+          },
+          "has_format": {
+            "description": "The file format of the distribution.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/molecular_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org",
+        "description": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/molecular_entity_as_synthetic_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any material with synthetic origin.",
+        "description": "Any material with synthetic origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/molecular_entity_as_biological_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any atom, molecule or macromolecule with biological origin.",
+        "description": "Any atom, molecule or macromolecule with biological origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "molecular_entity": {
+        "type": "object",
+        "properties": {}
+      },
+      "molecular_entity_as_synthetic_entity": {
+        "type": "object",
+        "properties": {}
+      },
+      "molecular_entity_as_biological_entity": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}

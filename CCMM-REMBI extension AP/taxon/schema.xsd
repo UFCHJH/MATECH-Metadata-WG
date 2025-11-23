@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="taxon" sawsdl:modelReference="https://bioschemas.org/terms/Taxon http://www.w3.org/ns/prov#Entity http://www.w3.org/2004/02/skos/core#Concept">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Taxon - A set of organisms asserted to represent a natural cohesive biological unit. Version
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_part" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/BFO_0000051">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Teil
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has part - A core relation that holds between a whole (Taxon) and its part (Biological System)
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - Label of the General Entity
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has description - Relation to the description of the General Entity.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="taxon" type="taxon"/>
+</xs:schema>

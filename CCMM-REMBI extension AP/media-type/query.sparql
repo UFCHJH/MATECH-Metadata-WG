@@ -1,0 +1,7 @@
+PREFIX ns0: <http://purl.org/dc/terms/>
+CONSTRUCT {
+  ?v0 a ns0:MediaType .
+}
+WHERE {
+  ?v0 a ns0:MediaType .
+}

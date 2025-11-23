@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/werkzeug": {
+      "parameters": [
+        {
+          "name": "has_tool_type",
+          "in": "path",
+          "description": "Points to specific type of tool used",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the tool or method.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the Method and/or Tool.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_parameter",
+          "in": "path",
+          "description": "Points to a parameter of a given method or tool.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "implementiert",
+          "in": "path",
+          "description": "Points to a method that is implemented by a given tool",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software",
+        "description": "Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "werkzeug": {
+        "type": "object",
+        "properties": {
+          "has_tool_type": {
+            "description": "Points to specific type of tool used",
+            "type": "string"
+          },
+          "label": {
+            "description": "Label of the tool or method.",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of the Method and/or Tool.",
+            "type": "string"
+          },
+          "has_parameter": {
+            "description": "Points to a parameter of a given method or tool.",
+            "type": "string"
+          },
+          "implementiert": {
+            "description": "Points to a method that is implemented by a given tool",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

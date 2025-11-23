@@ -1,0 +1,156 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/arbeitsschritt": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "time_reference",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "ist_voraussetzung_für_schritt",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_substep",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "näher_beschriebene_verbindung",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "investigates",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_output",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_input",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "realisiert_methode",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_employed_tool",
+          "in": "path",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "arbeitsschritt": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "time_reference": {
+            "type": "string"
+          },
+          "has_description": {
+            "type": "string"
+          },
+          "ist_voraussetzung_für_schritt": {
+            "type": "string"
+          },
+          "has_substep": {
+            "type": "string"
+          },
+          "näher_beschriebene_verbindung": {
+            "type": "string"
+          },
+          "investigates": {
+            "type": "string"
+          },
+          "has_output": {
+            "type": "string"
+          },
+          "has_input": {
+            "type": "string"
+          },
+          "realisiert_methode": {
+            "type": "string"
+          },
+          "has_employed_tool": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

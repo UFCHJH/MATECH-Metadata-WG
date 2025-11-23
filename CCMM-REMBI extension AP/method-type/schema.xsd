@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="method_type" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Method Type - Specific type of method used for specific Processing Step, e.g.: &#34;Immunofluorescence confocal microscopy&#34;, &#34;Cell growth&#34;, &#34;Image deconvolution&#34;...
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - Label of the Method Type
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="method_type" type="method_type"/>
+</xs:schema>

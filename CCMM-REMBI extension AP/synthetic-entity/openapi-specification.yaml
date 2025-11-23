@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/synthetic_entity": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the General Entity",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the General Entity.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Any thing with synthetic origin.",
+        "description": "Any thing with synthetic origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "synthetic_entity": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the General Entity",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of the General Entity.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

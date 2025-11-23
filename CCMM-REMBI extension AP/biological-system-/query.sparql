@@ -1,0 +1,31 @@
+PREFIX ns0: <http://www.w3.org/ns/prov#>
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX ns2: <http://purl.obolibrary.org/obo/>
+PREFIX ns3: <https://bioschemas.org/terms/>
+PREFIX ns4: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Entity .
+  ?v0 ns1:hasDescription ?v1 .
+  ?v1 a ns1:Description .
+  ?v0 ns2:BFO_0000051 ?v2 .
+  ?v2 a ns3:BioChemEntity .
+  ?v0 ns4:label ?v3 .
+}
+WHERE {
+  ?v0 a ns0:Entity .
+  OPTIONAL {
+    ?v0 ns1:hasDescription ?v1 .
+    OPTIONAL {
+      ?v1 a ns1:Description .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns2:BFO_0000051 ?v2 .
+    OPTIONAL {
+      ?v2 a ns3:BioChemEntity .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns4:label ?v3 .
+  }
+}

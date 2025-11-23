@@ -1,0 +1,15 @@
+PREFIX ns0: <http://spdx.org/rdf/terms#>
+CONSTRUCT {
+  ?v0 a ns0:Checksum .
+  ?v0 ns0:checksumValue ?v1 .
+  ?v0 ns0:algorithm ?v2 .
+  ?v2 a ns0:ChecksumAlgorithm .
+}
+WHERE {
+  ?v0 a ns0:Checksum .
+  ?v0 ns0:checksumValue ?v1 .
+  ?v0 ns0:algorithm ?v2 .
+  OPTIONAL {
+    ?v2 a ns0:ChecksumAlgorithm .
+  }
+}

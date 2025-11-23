@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="type">
+    <xs:choice>
+      <xs:element name="molecular_entity">
+        <xs:complexType sawsdl:modelReference="https://bioschemas.org/terms/BioChemEntity http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Molecular Entity - Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="molecular_entity_as_synthetic_entity">
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Molecular Entity as Synthetic Entity - Any material with synthetic origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="molecular_entity_as_biological_entity">
+        <xs:complexType sawsdl:modelReference="https://bioschemas.org/terms/BioChemEntity http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Molecular Entity as Biological Entity - Any atom, molecule or macromolecule with biological origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="element" type="type"/>
+</xs:schema>

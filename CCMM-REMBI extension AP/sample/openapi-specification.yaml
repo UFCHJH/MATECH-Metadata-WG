@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/sample": {
+      "parameters": [
+        {
+          "name": "wasderivedfrom",
+          "in": "path",
+          "description": "Sample has origin in General Entity",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "title",
+          "in": "path",
+          "description": "Title of the resource related to the dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_identifier",
+          "in": "path",
+          "description": "Relation to resource identifier.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Is an physical material entity of biogenic or synthetic origin obtained for the purpose of scientific investigation and analysis. Instances of Sample might represent inputs/outputs for different processing steps.",
+        "description": "Is an physical material entity of biogenic or synthetic origin obtained for the purpose of scientific investigation and analysis. Instances of Sample might represent inputs/outputs for different processing steps.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "sample": {
+        "type": "object",
+        "properties": {
+          "wasderivedfrom": {
+            "description": "Sample has origin in General Entity",
+            "type": "string"
+          },
+          "title": {
+            "description": "Title of the resource related to the dataset.",
+            "type": "string"
+          },
+          "has_identifier": {
+            "description": "Relation to resource identifier.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

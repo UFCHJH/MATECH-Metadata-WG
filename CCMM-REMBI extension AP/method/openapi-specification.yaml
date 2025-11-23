@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/methode": {
+      "parameters": [
+        {
+          "name": "implemented_by",
+          "in": "path",
+          "description": "Points to a tool that implements a given method",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "hasmethodtype",
+          "in": "path",
+          "description": "Points to a specific type of method used",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the tool or method.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the Method and/or Tool.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_parameter",
+          "in": "path",
+          "description": "Points to a parameter of a given method or tool.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Abstract description of a method for analysis, generation and transformation of samples and data.",
+        "description": "Abstract description of a method for analysis, generation and transformation of samples and data.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "methode": {
+        "type": "object",
+        "properties": {
+          "implemented_by": {
+            "description": "Points to a tool that implements a given method",
+            "type": "string"
+          },
+          "hasmethodtype": {
+            "description": "Points to a specific type of method used",
+            "type": "string"
+          },
+          "label": {
+            "description": "Label of the tool or method.",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of the Method and/or Tool.",
+            "type": "string"
+          },
+          "has_parameter": {
+            "description": "Points to a parameter of a given method or tool.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

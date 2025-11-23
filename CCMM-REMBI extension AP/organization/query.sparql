@@ -1,0 +1,112 @@
+PREFIX ns0: <http://xmlns.com/foaf/0.1/>
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns2: <http://www.w3.org/ns/adms#>
+PREFIX ns3: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns4: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns5: <http://www.w3.org/ns/dcat#>
+PREFIX ns6: <http://www.w3.org/2006/vcard/ns#>
+PREFIX ns7: <http://www.w3.org/ns/locn#>
+CONSTRUCT {
+  ?v0 a ns0:Agent .
+  ?v0 ns0:name ?v1 .
+  ?v0 ns1:hasIdentifier ?v2 .
+  ?v2 a ns2:Identifier .
+  ?v2 ns3:notation ?v3 .
+  ?v2 ns1:inScheme ?v4 .
+  ?v4 a ns1:IdentifierScheme .
+  ?v4 ns4:label ?v5 .
+  ?v0 ns5:contactPoint ?v6 .
+  ?v6 a ns1:ContactDetails .
+  ?v6 ns1:dataBox ?v7 .
+  ?v6 ns1:email ?v8 .
+  ?v6 ns1:phone ?v9 .
+  ?v6 ns6:hasAddress ?v10 .
+  ?v10 a ns7:Address .
+  ?v10 ns4:label ?v11 .
+  ?v10 ns7:fullAddress ?v12 .
+  ?v10 ns7:poBox ?v13 .
+  ?v10 ns7:thoroughfare ?v14 .
+  ?v10 ns7:locatorDesignator ?v15 .
+  ?v10 ns7:locatorName ?v16 .
+  ?v10 ns7:addressArea ?v17 .
+  ?v10 ns7:postName ?v18 .
+  ?v10 ns7:adminUnitL2 ?v19 .
+  ?v10 ns7:adminUnitL1 ?v20 .
+  ?v10 ns7:postCode ?v21 .
+  ?v0 ns6:organization-name ?v22 .
+}
+WHERE {
+  ?v0 a ns0:Agent .
+  ?v0 ns0:name ?v1 .
+  OPTIONAL {
+    ?v0 ns1:hasIdentifier ?v2 .
+    OPTIONAL {
+      ?v2 a ns2:Identifier .
+    }
+    ?v2 ns3:notation ?v3 .
+    ?v2 ns1:inScheme ?v4 .
+    OPTIONAL {
+      ?v4 a ns1:IdentifierScheme .
+    }
+    OPTIONAL {
+      ?v4 ns4:label ?v5 .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns5:contactPoint ?v6 .
+    OPTIONAL {
+      ?v6 a ns1:ContactDetails .
+    }
+    OPTIONAL {
+      ?v6 ns1:dataBox ?v7 .
+    }
+    OPTIONAL {
+      ?v6 ns1:email ?v8 .
+    }
+    OPTIONAL {
+      ?v6 ns1:phone ?v9 .
+    }
+    OPTIONAL {
+      ?v6 ns6:hasAddress ?v10 .
+      OPTIONAL {
+        ?v10 a ns7:Address .
+      }
+      OPTIONAL {
+        ?v10 ns4:label ?v11 .
+      }
+      OPTIONAL {
+        ?v10 ns7:fullAddress ?v12 .
+      }
+      OPTIONAL {
+        ?v10 ns7:poBox ?v13 .
+      }
+      OPTIONAL {
+        ?v10 ns7:thoroughfare ?v14 .
+      }
+      OPTIONAL {
+        ?v10 ns7:locatorDesignator ?v15 .
+      }
+      OPTIONAL {
+        ?v10 ns7:locatorName ?v16 .
+      }
+      OPTIONAL {
+        ?v10 ns7:addressArea ?v17 .
+      }
+      OPTIONAL {
+        ?v10 ns7:postName ?v18 .
+      }
+      OPTIONAL {
+        ?v10 ns7:adminUnitL2 ?v19 .
+      }
+      OPTIONAL {
+        ?v10 ns7:adminUnitL1 ?v20 .
+      }
+      OPTIONAL {
+        ?v10 ns7:postCode ?v21 .
+      }
+    }
+  }
+  OPTIONAL {
+    ?v0 ns6:organization-name ?v22 .
+  }
+}

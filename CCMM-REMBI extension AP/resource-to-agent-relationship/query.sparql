@@ -1,0 +1,250 @@
+PREFIX ns0: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns1: <http://www.w3.org/ns/dcat#>
+PREFIX ns2: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns3: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns4: <http://purl.org/dc/terms/>
+PREFIX ns5: <http://xmlns.com/foaf/0.1/>
+PREFIX ns6: <http://www.w3.org/2006/vcard/ns#>
+PREFIX ns7: <http://www.w3.org/ns/adms#>
+PREFIX ns8: <http://www.w3.org/ns/locn#>
+PREFIX ns9: <http://www.w3.org/ns/prov#>
+CONSTRUCT {
+  ?v0 a ns0:ResourceToAgentRelationship .
+  ?v0 ns1:hadRole ?v1 .
+  ?v1 a ns2:Concept .
+  ?v1 ns3:label ?v2 .
+  ?v0 ns4:relation ?v3 .
+  ?v3 a ns5:Agent .
+  ?v3 ns5:name ?v4 .
+  ?v3 ns6:organization-name ?v5 .
+  ?v3 ns0:hasIdentifier ?v6 .
+  ?v6 a ns7:Identifier .
+  ?v6 ns2:notation ?v7 .
+  ?v6 ns0:inScheme ?v8 .
+  ?v8 a ns0:IdentifierScheme .
+  ?v8 ns3:label ?v9 .
+  ?v3 ns1:contactPoint ?v10 .
+  ?v10 a ns0:ContactDetails .
+  ?v10 ns0:dataBox ?v11 .
+  ?v10 ns0:email ?v12 .
+  ?v10 ns0:phone ?v13 .
+  ?v10 ns6:hasAddress ?v14 .
+  ?v14 a ns8:Address .
+  ?v14 ns3:label ?v15 .
+  ?v14 ns8:fullAddress ?v16 .
+  ?v14 ns8:poBox ?v17 .
+  ?v14 ns8:thoroughfare ?v18 .
+  ?v14 ns8:locatorDesignator ?v19 .
+  ?v14 ns8:locatorName ?v20 .
+  ?v14 ns8:addressArea ?v21 .
+  ?v14 ns8:postName ?v22 .
+  ?v14 ns8:adminUnitL2 ?v23 .
+  ?v14 ns8:adminUnitL1 ?v24 .
+  ?v14 ns8:postCode ?v25 .
+  ?v0 ns4:relation ?v26 .
+  ?v26 a ns9:Person .
+  ?v26 ns5:name ?v27 .
+  ?v26 ns6:given-name ?v28 .
+  ?v26 ns6:family-name ?v29 .
+  ?v26 ns0:hasIdentifier ?v30 .
+  ?v30 a ns7:Identifier .
+  ?v30 ns2:notation ?v31 .
+  ?v30 ns0:inScheme ?v32 .
+  ?v32 a ns0:IdentifierScheme .
+  ?v32 ns3:label ?v33 .
+  ?v26 ns1:contactPoint ?v34 .
+  ?v34 a ns0:ContactDetails .
+  ?v34 ns0:dataBox ?v35 .
+  ?v34 ns0:email ?v36 .
+  ?v34 ns0:phone ?v37 .
+  ?v34 ns6:hasAddress ?v38 .
+  ?v38 a ns8:Address .
+  ?v38 ns3:label ?v39 .
+  ?v38 ns8:fullAddress ?v40 .
+  ?v38 ns8:poBox ?v41 .
+  ?v38 ns8:thoroughfare ?v42 .
+  ?v38 ns8:locatorDesignator ?v43 .
+  ?v38 ns8:locatorName ?v44 .
+  ?v38 ns8:addressArea ?v45 .
+  ?v38 ns8:postName ?v46 .
+  ?v38 ns8:adminUnitL2 ?v47 .
+  ?v38 ns8:adminUnitL1 ?v48 .
+  ?v38 ns8:postCode ?v49 .
+  ?v26 ns0:hasAffiliation ?v50 .
+  ?v50 a ns5:Agent .
+  ?v0 ns4:relation ?v51 .
+  ?v51 a ns5:Agent .
+}
+WHERE {
+  ?v0 a ns0:ResourceToAgentRelationship .
+  ?v0 ns1:hadRole ?v1 .
+  OPTIONAL {
+    ?v1 a ns2:Concept .
+  }
+  OPTIONAL {
+    ?v1 ns3:label ?v2 .
+  }
+  {
+    ?v0 ns4:relation ?v3 .
+    ?v3 a ns5:Agent .
+    ?v3 ns5:name ?v4 .
+    OPTIONAL {
+      ?v3 ns6:organization-name ?v5 .
+    }
+    OPTIONAL {
+      ?v3 ns0:hasIdentifier ?v6 .
+      OPTIONAL {
+        ?v6 a ns7:Identifier .
+      }
+      ?v6 ns2:notation ?v7 .
+      ?v6 ns0:inScheme ?v8 .
+      OPTIONAL {
+        ?v8 a ns0:IdentifierScheme .
+      }
+      OPTIONAL {
+        ?v8 ns3:label ?v9 .
+      }
+    }
+    OPTIONAL {
+      ?v3 ns1:contactPoint ?v10 .
+      OPTIONAL {
+        ?v10 a ns0:ContactDetails .
+      }
+      OPTIONAL {
+        ?v10 ns0:dataBox ?v11 .
+      }
+      OPTIONAL {
+        ?v10 ns0:email ?v12 .
+      }
+      OPTIONAL {
+        ?v10 ns0:phone ?v13 .
+      }
+      OPTIONAL {
+        ?v10 ns6:hasAddress ?v14 .
+        OPTIONAL {
+          ?v14 a ns8:Address .
+        }
+        OPTIONAL {
+          ?v14 ns3:label ?v15 .
+        }
+        OPTIONAL {
+          ?v14 ns8:fullAddress ?v16 .
+        }
+        OPTIONAL {
+          ?v14 ns8:poBox ?v17 .
+        }
+        OPTIONAL {
+          ?v14 ns8:thoroughfare ?v18 .
+        }
+        OPTIONAL {
+          ?v14 ns8:locatorDesignator ?v19 .
+        }
+        OPTIONAL {
+          ?v14 ns8:locatorName ?v20 .
+        }
+        OPTIONAL {
+          ?v14 ns8:addressArea ?v21 .
+        }
+        OPTIONAL {
+          ?v14 ns8:postName ?v22 .
+        }
+        OPTIONAL {
+          ?v14 ns8:adminUnitL2 ?v23 .
+        }
+        OPTIONAL {
+          ?v14 ns8:adminUnitL1 ?v24 .
+        }
+        OPTIONAL {
+          ?v14 ns8:postCode ?v25 .
+        }
+      }
+    }
+  } UNION {
+    ?v0 ns4:relation ?v26 .
+    ?v26 a ns9:Person .
+    ?v26 ns5:name ?v27 .
+    OPTIONAL {
+      ?v26 ns6:given-name ?v28 .
+    }
+    OPTIONAL {
+      ?v26 ns6:family-name ?v29 .
+    }
+    OPTIONAL {
+      ?v26 ns0:hasIdentifier ?v30 .
+      OPTIONAL {
+        ?v30 a ns7:Identifier .
+      }
+      ?v30 ns2:notation ?v31 .
+      ?v30 ns0:inScheme ?v32 .
+      OPTIONAL {
+        ?v32 a ns0:IdentifierScheme .
+      }
+      OPTIONAL {
+        ?v32 ns3:label ?v33 .
+      }
+    }
+    OPTIONAL {
+      ?v26 ns1:contactPoint ?v34 .
+      OPTIONAL {
+        ?v34 a ns0:ContactDetails .
+      }
+      OPTIONAL {
+        ?v34 ns0:dataBox ?v35 .
+      }
+      OPTIONAL {
+        ?v34 ns0:email ?v36 .
+      }
+      OPTIONAL {
+        ?v34 ns0:phone ?v37 .
+      }
+      OPTIONAL {
+        ?v34 ns6:hasAddress ?v38 .
+        OPTIONAL {
+          ?v38 a ns8:Address .
+        }
+        OPTIONAL {
+          ?v38 ns3:label ?v39 .
+        }
+        OPTIONAL {
+          ?v38 ns8:fullAddress ?v40 .
+        }
+        OPTIONAL {
+          ?v38 ns8:poBox ?v41 .
+        }
+        OPTIONAL {
+          ?v38 ns8:thoroughfare ?v42 .
+        }
+        OPTIONAL {
+          ?v38 ns8:locatorDesignator ?v43 .
+        }
+        OPTIONAL {
+          ?v38 ns8:locatorName ?v44 .
+        }
+        OPTIONAL {
+          ?v38 ns8:addressArea ?v45 .
+        }
+        OPTIONAL {
+          ?v38 ns8:postName ?v46 .
+        }
+        OPTIONAL {
+          ?v38 ns8:adminUnitL2 ?v47 .
+        }
+        OPTIONAL {
+          ?v38 ns8:adminUnitL1 ?v48 .
+        }
+        OPTIONAL {
+          ?v38 ns8:postCode ?v49 .
+        }
+      }
+    }
+    OPTIONAL {
+      ?v26 ns0:hasAffiliation ?v50 .
+      OPTIONAL {
+        ?v50 a ns5:Agent .
+      }
+    }
+  } UNION {
+    ?v0 ns4:relation ?v51 .
+    ?v51 a ns5:Agent .
+  }
+}

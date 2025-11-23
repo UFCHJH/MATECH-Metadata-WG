@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="sample" sawsdl:modelReference="http://www.w3.org/ns/prov#Entity http://www.w3.org/2000/01/rdf-schema#Resource">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Sample - Is an physical material entity of biogenic or synthetic origin obtained for the purpose of scientific investigation and analysis. Instances of Sample might represent inputs/outputs for different processing steps.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="wasderivedfrom" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            wasDerivedFrom - Sample has origin in General Entity
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="title" type="xs:string" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#relatedItemTitle">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            title - Title of the resource related to the dataset.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_identifier" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has identifier - Relation to resource identifier.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sample" type="sample"/>
+</xs:schema>

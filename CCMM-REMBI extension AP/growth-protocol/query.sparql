@@ -1,0 +1,97 @@
+PREFIX ns0: <http://w3id.org/nfdi4ing/metadata4ing#>
+PREFIX ns1: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns3: <http://www.w3.org/2006/time#>
+PREFIX ns4: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX ns5: <http://purl.obolibrary.org/obo/>
+PREFIX ns6: <http://www.w3.org/ns/prov#>
+CONSTRUCT {
+  ?v0 a ns0:ProcessingStep .
+  ?v0 ns1:label ?v1 .
+  ?v0 ns2:hasTimeReference ?v2 .
+  ?v2 a ns3:TemporalEntity .
+  ?v0 ns4:hasDescription ?v3 .
+  ?v3 a ns4:Description .
+  ?v0 ns5:BFO_0000063 ?v4 .
+  ?v4 a ns0:ProcessingStep .
+  ?v0 ns5:BFO_0000051 ?v5 .
+  ?v5 a ns0:ProcessingStep .
+  ?v0 ns6:qualifiedAssociation ?v6 .
+  ?v6 a ns2:ResourceToAgentRelationship .
+  ?v0 ns0:investigates ?v7 .
+  ?v7 a ns6:Entity .
+  ?v0 ns5:RO_0002234 ?v8 .
+  ?v8 a ns1:Resource .
+  ?v0 ns5:RO_0002233 ?v9 .
+  ?v9 a ns1:Resource .
+  ?v0 ns0:realizesMethod ?v10 .
+  ?v10 a ns0:Method .
+  ?v0 ns0:hasEmployedTool ?v11 .
+  ?v11 a ns0:Tool .
+}
+WHERE {
+  ?v0 a ns0:ProcessingStep .
+  OPTIONAL {
+    ?v0 ns1:label ?v1 .
+  }
+  OPTIONAL {
+    ?v0 ns2:hasTimeReference ?v2 .
+    OPTIONAL {
+      ?v2 a ns3:TemporalEntity .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns4:hasDescription ?v3 .
+    OPTIONAL {
+      ?v3 a ns4:Description .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns5:BFO_0000063 ?v4 .
+    OPTIONAL {
+      ?v4 a ns0:ProcessingStep .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns5:BFO_0000051 ?v5 .
+    OPTIONAL {
+      ?v5 a ns0:ProcessingStep .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns6:qualifiedAssociation ?v6 .
+    OPTIONAL {
+      ?v6 a ns2:ResourceToAgentRelationship .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns0:investigates ?v7 .
+    OPTIONAL {
+      ?v7 a ns6:Entity .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns5:RO_0002234 ?v8 .
+    OPTIONAL {
+      ?v8 a ns1:Resource .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns5:RO_0002233 ?v9 .
+    OPTIONAL {
+      ?v9 a ns1:Resource .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns0:realizesMethod ?v10 .
+    OPTIONAL {
+      ?v10 a ns0:Method .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns0:hasEmployedTool ?v11 .
+    OPTIONAL {
+      ?v11 a ns0:Tool .
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="arbeitsschritt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="time_reference" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ist_voraussetzung_für_schritt" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/BFO_0000063"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_substep" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/BFO_0000051"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="näher_beschriebene_verbindung" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAssociation"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="investigates" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#investigates"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_output" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/RO_0002234"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_input" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/RO_0002233"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="realisiert_methode" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#realizesMethod"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_employed_tool" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#hasEmployedTool"/>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="image_processing" type="arbeitsschritt"/>
+</xs:schema>

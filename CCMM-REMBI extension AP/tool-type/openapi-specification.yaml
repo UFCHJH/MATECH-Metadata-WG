@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/tool_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the Tool Type",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Specific type of tool or instrument used during specific Processing Step.",
+        "description": "Specific type of tool or instrument used during specific Processing Step.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "tool_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the Tool Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

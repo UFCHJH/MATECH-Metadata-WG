@@ -1,0 +1,25 @@
+PREFIX ns0: <http://www.w3.org/ns/prov#>
+PREFIX ns1: <https://bioschemas.org/terms/>
+CONSTRUCT {
+  ?v0 a ns0:Entity .
+  ?v1 a ns0:Entity .
+  ?v2 a ns0:Entity .
+  ?v3 a ns1:Taxon .
+  ?v4 a ns0:Entity .
+  ?v5 a ns1:BioChemEntity .
+}
+WHERE {
+  {
+    ?v0 a ns0:Entity .
+  } UNION {
+    ?v1 a ns0:Entity .
+  } UNION {
+    ?v2 a ns0:Entity .
+  } UNION {
+    ?v3 a ns1:Taxon .
+  } UNION {
+    ?v4 a ns0:Entity .
+  } UNION {
+    ?v5 a ns1:BioChemEntity .
+  }
+}

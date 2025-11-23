@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="type">
+    <xs:choice>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+          <xs:annotation>
+            <xs:documentation xml:lang="de">
+              Arbeitsschritt
+            </xs:documentation>
+            <xs:documentation xml:lang="en">
+              Processing Step - Specific action undertaken during research
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+          <xs:annotation>
+            <xs:documentation xml:lang="de">
+              Arbeitsschritt
+            </xs:documentation>
+            <xs:documentation xml:lang="en">
+              Growth Protocol - A specific ProcessingStep describing growing  and/or cultivation of biological samples. It describes the sample's development before its subsequent sample preparation including treatments applied its growth and cultivation.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+          <xs:annotation>
+            <xs:documentation xml:lang="de">
+              Arbeitsschritt
+            </xs:documentation>
+            <xs:documentation xml:lang="en">
+              Sample Preparation - A specific ProcessingStep encompassing all physical, chemical, or biological manipulations applied to a sample before its imaging.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+          <xs:annotation>
+            <xs:documentation xml:lang="de">
+              Arbeitsschritt
+            </xs:documentation>
+            <xs:documentation xml:lang="en">
+              Image Acquisition - A specific ProcessingStep describing the process of capturing image data from Sample using an imaging device and method.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="arbeitsschritt">
+        <xs:complexType sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+          <xs:annotation>
+            <xs:documentation xml:lang="de">
+              Arbeitsschritt
+            </xs:documentation>
+            <xs:documentation xml:lang="en">
+              Image Analysis - A specific ProcessingStep describing process of quantitative or qualitative evaluation of image data.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="element" type="type"/>
+</xs:schema>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:include schemaLocation="../repository/schema.xsd"/>
+  <xs:include schemaLocation="../application-profile/schema.xsd"/>
+  <xs:include schemaLocation="../resource-to-agent-relationship/schema.xsd"/>
+  <xs:include schemaLocation="../language-system/schema.xsd"/>
+  <xs:complexType name="katalogizační_záznam" sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
+    <xs:annotation>
+      <xs:documentation xml:lang="ar">
+        سجل
+      </xs:documentation>
+      <xs:documentation xml:lang="cs">
+        Katalogizační záznam - Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu.
+      </xs:documentation>
+      <xs:documentation xml:lang="da">
+        Katalogpost - En post i et datakatalog der beskriver registreringen af et enkelt datasæt eller en datatjeneste.
+      </xs:documentation>
+      <xs:documentation xml:lang="el">
+        Καταγραφή καταλόγου - Μία καταγραφή ενός καταλόγου, η οποία περιγράφει ένα συγκεκριμένο σύνολο δεδομένων.
+      </xs:documentation>
+      <xs:documentation xml:lang="en">
+        Metadata Record - Description of the metadata record of the dataset. 
+      </xs:documentation>
+      <xs:documentation xml:lang="es">
+        Registro del catálogo - Un registro en un catálogo de datos que describe un solo conjunto de datos o un servicio de datos.
+      </xs:documentation>
+      <xs:documentation xml:lang="fr">
+        Registre du catalogue - Un registre du catalogue ou une entrée du catalogue, décrivant un seul jeu de données.
+      </xs:documentation>
+      <xs:documentation xml:lang="it">
+        Record di catalogo - Un record in un catalogo di dati che descrive un singolo dataset o servizio di dati.
+      </xs:documentation>
+      <xs:documentation xml:lang="ja">
+        カタログ・レコード - 1つのデータセットを記述したデータ・カタログ内のレコード。
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="date_updated" type="xs:date" sawsdl:modelReference="http://purl.org/dc/terms/modified">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            date updated - Date on which the resource was changed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="date_created" type="xs:date" sawsdl:modelReference="http://purl.org/dc/terms/created">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            date created - The date on which the metadata record was created.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_original_repository" type="katalog" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#originalRepository">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has original repository - Link to the repository in which the metadata were originally stored and curated.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard" type="application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            conforms to standard - An established standard to which the metadata record conforms.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relation" type="resource_to_agent_relationship" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#qualifiedRelation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            qualified relation
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="language" type="language_system" sawsdl:modelReference="http://purl.org/dc/terms/language">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            language - A language used in the textual metadata describing titles, descriptions of the metadata record.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="katalogizační_záznam" type="katalogizační_záznam"/>
+</xs:schema>

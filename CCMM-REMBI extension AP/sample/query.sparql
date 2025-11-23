@@ -1,0 +1,30 @@
+PREFIX ns0: <http://www.w3.org/ns/prov#>
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns3: <http://www.w3.org/ns/adms#>
+CONSTRUCT {
+  ?v0 a ns0:Entity .
+  ?v0 ns0:wasDerivedFrom ?v1 .
+  ?v1 a ns0:Entity .
+  ?v0 ns1:relatedItemTitle ?v2 .
+  ?v0 ns2:hasIdentifier ?v3 .
+  ?v3 a ns3:Identifier .
+}
+WHERE {
+  ?v0 a ns0:Entity .
+  OPTIONAL {
+    ?v0 ns0:wasDerivedFrom ?v1 .
+    OPTIONAL {
+      ?v1 a ns0:Entity .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns1:relatedItemTitle ?v2 .
+  }
+  OPTIONAL {
+    ?v0 ns2:hasIdentifier ?v3 .
+    OPTIONAL {
+      ?v3 a ns3:Identifier .
+    }
+  }
+}

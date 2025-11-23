@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="type">
+    <xs:choice>
+      <xs:element name="synthetic_entity">
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Synthetic Entity - Any thing with synthetic origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="biological_entity">
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Biological Entity - Any thing with biological origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="molecular_entity_as_synthetic_entity">
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Molecular Entity as Synthetic Entity - Any material with synthetic origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="taxon">
+        <xs:complexType sawsdl:modelReference="https://bioschemas.org/terms/Taxon http://www.w3.org/ns/prov#Entity http://www.w3.org/2004/02/skos/core#Concept">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Taxon - A set of organisms asserted to represent a natural cohesive biological unit. Version
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="biological_system_">
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Biological System  - A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="molecular_entity_as_biological_entity">
+        <xs:complexType sawsdl:modelReference="https://bioschemas.org/terms/BioChemEntity http://www.w3.org/ns/prov#Entity">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Molecular Entity as Biological Entity - Any atom, molecule or macromolecule with biological origin.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element name="iri" type="xs:anyURI"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="element" type="type"/>
+</xs:schema>

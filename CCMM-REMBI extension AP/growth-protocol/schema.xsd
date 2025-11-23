@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="arbeitsschritt" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep">
+    <xs:annotation>
+      <xs:documentation xml:lang="de">
+        Arbeitsschritt
+      </xs:documentation>
+      <xs:documentation xml:lang="en">
+        Growth Protocol - A specific ProcessingStep describing growing  and/or cultivation of biological samples. It describes the sample's development before its subsequent sample preparation including treatments applied its growth and cultivation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - Label of the Processing Step.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_time_reference" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has time reference - Referents to events related to the Processing Step.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has description - Relation to the description of the Processing Step.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ist_voraussetzung_für_schritt" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/BFO_0000063">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            ist Voraussetzung für Schritt
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            precedes - x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) &#60;= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_substep" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/BFO_0000051">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Teil
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has substep - a core relation that holds between a whole and its part
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="näher_beschriebene_verbindung" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAssociation">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            näher beschriebene Verbindung - Ermöglicht die Angabe weiterer Informationen (z.B. einer Rolle) zu einer Verknüpfung zwischen einem Agenten (z.B. einer Person) und einer Aktivität (z.B. einem Prozessschritt).
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            qualified association - Link to a description of a relationship between Processing Step and an agent with the specification of the role of agent in this relationship.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="investigates" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#investigates">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            untersucht
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            investigates - (x investigates y) means that x is about y, in the context of scientific research and development
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_output" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/RO_0002234">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Output
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has output - (x has output y) means x provides specific output y for the result or further processes
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_input" type="xs:anyURI" sawsdl:modelReference="http://purl.obolibrary.org/obo/RO_0002233">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Input
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has input - (x has input y) means x takes specific input as y for further processes
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="realisiert_methode" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#realizesMethod">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            realisiert Methode
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            realizes method - Points to a method that is used within a given processing step
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_employed_tool" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#hasEmployedTool">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat eingesetztes Werkzeug - verweist auf ein Werkzeug, das in einem Arbeitsschritt verwendet wurde
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has employed tool - Points to a tool that is used within a given processing step
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="arbeitsschritt" type="arbeitsschritt"/>
+</xs:schema>

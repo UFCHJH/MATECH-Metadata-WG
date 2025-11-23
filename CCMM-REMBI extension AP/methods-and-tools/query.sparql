@@ -1,0 +1,16 @@
+PREFIX ns0: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns1: <http://w3id.org/nfdi4ing/metadata4ing#>
+CONSTRUCT {
+  ?v0 a ns0:Concept .
+  ?v1 a ns1:Method .
+  ?v2 a ns1:Tool .
+}
+WHERE {
+  {
+    ?v0 a ns0:Concept .
+  } UNION {
+    ?v1 a ns1:Method .
+  } UNION {
+    ?v2 a ns1:Tool .
+  }
+}

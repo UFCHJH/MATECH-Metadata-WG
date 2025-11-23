@@ -1,0 +1,74 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/time_instant": {
+      "parameters": [
+        {
+          "name": "date_information",
+          "in": "path",
+          "description": "Additional information to the date in text form.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_date_type",
+          "in": "path",
+          "description": "Reference to the codelist of date types.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": null,
+          "in": "path",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A temporal entity with zero extent or duration.",
+        "description": "A temporal entity with zero extent or duration.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "time_instant": {
+        "type": "object",
+        "properties": {
+          "date_information": {
+            "description": "Additional information to the date in text form.",
+            "type": "string"
+          },
+          "has_date_type": {
+            "description": "Reference to the codelist of date types.",
+            "type": "string"
+          },
+          "null": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

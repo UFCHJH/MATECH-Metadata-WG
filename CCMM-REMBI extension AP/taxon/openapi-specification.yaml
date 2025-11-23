@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/taxon": {
+      "parameters": [
+        {
+          "name": "has_part",
+          "in": "path",
+          "description": "A core relation that holds between a whole (Taxon) and its part (Biological System)",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the General Entity",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_description",
+          "in": "path",
+          "description": "Relation to the description of the General Entity.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A set of organisms asserted to represent a natural cohesive biological unit. Version",
+        "description": "A set of organisms asserted to represent a natural cohesive biological unit. Version",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "taxon": {
+        "type": "object",
+        "properties": {
+          "has_part": {
+            "description": "A core relation that holds between a whole (Taxon) and its part (Biological System)",
+            "type": "string"
+          },
+          "label": {
+            "description": "Label of the General Entity",
+            "type": "string"
+          },
+          "has_description": {
+            "description": "Relation to the description of the General Entity.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

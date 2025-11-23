@@ -1,0 +1,77 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/methods_and_tools": {
+      "parameters": [],
+      "get": {
+        "summary": "An abstract class unifiing methods and tools.",
+        "description": "An abstract class unifiing methods and tools.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/methode": {
+      "parameters": [],
+      "get": {
+        "summary": "Abstract description of a method for analysis, generation and transformation of samples and data.",
+        "description": "Abstract description of a method for analysis, generation and transformation of samples and data.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/werkzeug": {
+      "parameters": [],
+      "get": {
+        "summary": "Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software",
+        "description": "Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "methods_and_tools": {
+        "type": "object",
+        "properties": {}
+      },
+      "methode": {
+        "type": "object",
+        "properties": {}
+      },
+      "werkzeug": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}

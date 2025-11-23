@@ -1,0 +1,140 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/synthetic_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any thing with synthetic origin.",
+        "description": "Any thing with synthetic origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/biological_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any thing with biological origin.",
+        "description": "Any thing with biological origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/molecular_entity_as_synthetic_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any material with synthetic origin.",
+        "description": "Any material with synthetic origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taxon": {
+      "parameters": [],
+      "get": {
+        "summary": "A set of organisms asserted to represent a natural cohesive biological unit. Version",
+        "description": "A set of organisms asserted to represent a natural cohesive biological unit. Version",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/biological_system_": {
+      "parameters": [],
+      "get": {
+        "summary": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+        "description": "A core relation that holds between a whole (Biological System) and its part (Molecular Entity as Biological Entity)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/molecular_entity_as_biological_entity": {
+      "parameters": [],
+      "get": {
+        "summary": "Any atom, molecule or macromolecule with biological origin.",
+        "description": "Any atom, molecule or macromolecule with biological origin.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "synthetic_entity": {
+        "type": "object",
+        "properties": {}
+      },
+      "biological_entity": {
+        "type": "object",
+        "properties": {}
+      },
+      "molecular_entity_as_synthetic_entity": {
+        "type": "object",
+        "properties": {}
+      },
+      "taxon": {
+        "type": "object",
+        "properties": {}
+      },
+      "biological_system_": {
+        "type": "object",
+        "properties": {}
+      },
+      "molecular_entity_as_biological_entity": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}

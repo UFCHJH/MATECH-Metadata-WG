@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="methode" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#Method">
+    <xs:annotation>
+      <xs:documentation xml:lang="de">
+        Methode
+      </xs:documentation>
+      <xs:documentation xml:lang="en">
+        Method - Abstract description of a method for analysis, generation and transformation of samples and data.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="implemented_by" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#implementedByTool">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            wird implementiert durch
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            implemented by - Points to a tool that implements a given method
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="hasmethodtype" type="xs:anyURI" sawsdl:modelReference="https://w3id.org/rembi-voc/#hasmethodtype">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            hasMethodType - Points to a specific type of method used
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="xs:anySimpleType" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - Label of the tool or method.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has description - Relation to the description of the Method and/or Tool.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_parameter" type="xs:anyURI" sawsdl:modelReference="http://w3id.org/nfdi4ing/metadata4ing#hasParameter">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">
+            hat Parameter
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            has parameter - Points to a parameter of a given method or tool.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="methode" type="methode"/>
+</xs:schema>

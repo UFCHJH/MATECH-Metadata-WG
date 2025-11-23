@@ -1,0 +1,128 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/resource": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "description": "Title of the resource related to the dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "resource_url",
+          "in": "path",
+          "description": "Resolvable URL representing the resource, preferably human readable.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "qualified_relation",
+          "in": "path",
+          "description": "Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_time_reference",
+          "in": "path",
+          "description": "Reference to events related to the resource.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_identifier",
+          "in": "path",
+          "description": "Relation to resource identifier.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_resource_type",
+          "in": "path",
+          "description": "A resource type of the related resource.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "has_resource_relation_type",
+          "in": "path",
+          "description": "Relation to the relation type between dataset and resource.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Resource represents any resource, physical or digital, that is related to the described dataset. ",
+        "description": "Resource represents any resource, physical or digital, that is related to the described dataset. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "resource": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "Title of the resource related to the dataset.",
+            "type": "string"
+          },
+          "resource_url": {
+            "description": "Resolvable URL representing the resource, preferably human readable.",
+            "type": "string"
+          },
+          "qualified_relation": {
+            "description": "Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship.",
+            "type": "string"
+          },
+          "has_time_reference": {
+            "description": "Reference to events related to the resource.",
+            "type": "string"
+          },
+          "has_identifier": {
+            "description": "Relation to resource identifier.",
+            "type": "string"
+          },
+          "has_resource_type": {
+            "description": "A resource type of the related resource.",
+            "type": "string"
+          },
+          "has_resource_relation_type": {
+            "description": "Relation to the relation type between dataset and resource.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
